@@ -34,6 +34,16 @@ public class Cliente  implements Serializable{
     public Cliente() {
     }
 
+    public Cliente(String cpf, String nome, String email,
+            String telefone) {
+        super();
+        this.id = id;
+        this.cpf = cpf;
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
     public Cliente(Long id, String cpf, String nome, String email,
             String telefone) {
         super();
@@ -43,7 +53,19 @@ public class Cliente  implements Serializable{
         this.email = email;
         this.telefone = telefone;
     }
+
     
+    
+    public Cliente(Long id, String cpf, String nome, String email, String telefone, List<Endereco> enderecos) {
+        super();
+        this.enderecos = enderecos;
+        this.id = id;
+        this.cpf = cpf;
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
     public List<Endereco> getEnderecosClientes() {
         return enderecos;
     }
